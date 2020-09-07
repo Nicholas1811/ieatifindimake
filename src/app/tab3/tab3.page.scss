@@ -1,0 +1,35 @@
+ion-list{
+    --background : #FB6D4C;
+}
+ion-item{
+    --background : #FB6D4C;
+    --border-color: black ;
+    --border-radius : 2px 2px 2px 2px;
+    margin-left: -15px;
+}
+ion-searchbar{
+    --background : white;
+    --border-radius: 100px;
+    --placeholder-font-weight: 100;
+}
+ion-avatar{
+    width: 75px;
+    height: 75px;
+}
+.border{
+    border-radius: 10px;
+  border: 1px solid black;
+}
+
+.textColor{
+    color: black;
+    padding-left: 20px;
+    font-weight: bold;
+}
+#imageThumbnail{
+    width: 100px;
+    height: 100px;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+

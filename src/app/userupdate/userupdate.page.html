@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Update account
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br><br><br>
+  <div class = "image">
+    <ion-thumbnail class = "image">
+      <img src = {{oldImage}}/>
+      </ion-thumbnail>
+  </div>
+  <ion-button (click) = "uploadImage()" class = "uploadButton" shape = "round">
+    Upload Image
+    </ion-button>
+    <ion-button (click) = "removeImage()" class = "uploadButton" shape = "round">
+      Remove Image
+      </ion-button>
+  <ion-input class="input" placeholder="Enter your username" color = "tertiary" [(ngModel)]="usernames" value = {{oldUsername}}>
+  </ion-input>
+  <ion-icon name = "pencil" (click) = updateUsername() class = "googleLoginButton"></ion-icon>
+  <br>
+  <ion-input class="input" *ngIf = "userBoolean == false " placeholder="Enter your new password" type="password" color = "tertiary" [(ngModel)] = "passwords">
+  </ion-input>
+  <ion-icon *ngIf ="userBoolean == false" name = "pencil" (click) = updatePassword() class = "googleLoginButton"></ion-icon>
+
+</ion-content>

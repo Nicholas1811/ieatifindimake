@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Watch Videos Here!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor = "let item of videotest" class = "border">
+    <ion-item lines = "none" (click) = "openVid(item.snippet.resourceId.videoId)" >
+      <img src={{item.snippet.thumbnails.maxres.url}} id="recipeThumbnail"/>
+      <p>
+    <div id = "nameOfRecipe">
+      <br><br>
+      {{item.snippet.title}}
+      <br><br>
+      {{item.snippet.channelTitle}}
+      <br><br>
+      <ion-icon name = "logo-youtube"></ion-icon>
+      </div>
+    </ion-item>
+    </ion-card>
+
+</ion-content>

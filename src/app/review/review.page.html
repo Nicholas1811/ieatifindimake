@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Review for {{recipeItem.Name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="imageDim">
+    <img src={{recipeItem.Image}} />
+  </div>
+  <div id="textArea">
+    <ion-textarea color="tertiary" [(ngModel)]="reviewContent">
+
+    </ion-textarea>
+  </div>
+  <div class="fabButton">
+    <ion-fab>
+      <ion-fab-button (click)="addReview()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+  <div class = "recordButton">
+    <ion-fab>
+      <ion-fab-button (click)="recordReview()">
+        <ion-icon name="recording"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    </div>
+
+  <br> <br> <br>
+
+      <ion-card *ngFor="let review of reviewForRecipe" class = "border">
+        <ion-item lines = "none" (click)="updateDeleteReview(review.userID, review.id)">
+          <div class="recipeImage">
+            <ion-thumbnail id="recipeThumbnail">
+              <img src={{review.userprofileimagereview}} />
+            </ion-thumbnail>
+          </div>
+          <div class="textColor">
+            <strong>{{review.reviewContent}}</strong>
+            <br><br>
+            {{review.username}}
+            <br><br>
+            {{review.datePosted}}
+          </div>
+        </ion-item>
+        </ion-card>
+</ion-content>

@@ -1,0 +1,24 @@
+#recipeThumbnail{
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 20px;
+  }
+  #nameOfRecipe{
+      margin-left: 20px;
+      margin-top: -40px;
+  }
+.facebookLogo{
+  width: 30px;
+  height: 30px;
+}
+ion-item{
+  --background : #FB6D4C;
+  --border-color: black ;
+  --border-radius : 2px 2px 2px 2px;
+}
+.border{
+  border-radius: 10px;
+  border: 1px solid black;
+}

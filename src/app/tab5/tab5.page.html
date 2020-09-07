@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Profile
+      <ion-icon name="person"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br><br><br>
+  <div class="image">
+    <ion-thumbnail class = "image">
+    <img src = {{profileImages}}/>
+    </ion-thumbnail>
+  </div>
+  <div class = "email">
+    <br>
+    <strong>Email:</strong> {{userEmail}}
+    <br><br>
+     <strong>Username:</strong> {{usernames}}
+  </div>
+  <ion-button shape="round" class="shopHereButton" (click)="updateUser()">
+    Update
+  </ion-button>
+  <ion-button shape="round" class="shopHereButton" (click) = "deleteUser()">
+    Delete
+  </ion-button>
+  <ion-button shape="round" class="logoutButton" (click) = "logout()">
+    Logout
+  </ion-button>
+</ion-content>

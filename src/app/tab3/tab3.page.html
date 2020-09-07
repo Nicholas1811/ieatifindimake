@@ -1,17 +1,25 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+    <ion-toolbar>
     <ion-title>
-      Tab 3
+      Search
+      <ion-icon name="search"></ion-icon>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-searchbar (ionInput)="filter($event)" placeholder = "Search here."></ion-searchbar>
+<ion-list>
+  <ion-card *ngFor = "let item of recipeData" class = "border">
+    <ion-item lines = "none" (click) = "passToDetail(item.id)">
+      <ion-avatar id = "imageThumbnail">
+        <img src = {{item.Image}}/>
+        </ion-avatar>
+      <div class = "textColor">
+      {{item.Name}}
+      </div>
+      </ion-item>
+    </ion-card>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  </ion-list>
 </ion-content>

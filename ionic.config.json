@@ -1,5 +1,7 @@
 {
   "name": "ieatifindimake",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

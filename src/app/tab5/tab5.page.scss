@@ -1,0 +1,36 @@
+.email{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.shopHereButton{
+    border: 2px black solid;
+    border-radius: 50px;
+    height: 50px;
+    width: 150px;
+    color: black;
+    margin-left: 20px;
+    --background:#FB6D4C;
+}
+.logoutButton{
+    border: 2px black solid;
+    border-radius: 50px;
+    height: 50px;
+    width: 150px;
+    color: black;
+    margin-left: 100px;
+    --background:#FB6D4C;
+}
+img{
+    margin-top: 10px;
+    
+}
+
+ion-thumbnail{
+    margin-left: auto;
+    margin-right: auto;
+    --border-radius: 20%;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}

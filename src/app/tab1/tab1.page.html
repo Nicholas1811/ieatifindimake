@@ -1,17 +1,53 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Home
+      <ion-icon name="home"></ion-icon>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <br>
+  <ion-slides pager="false" #slides [options]="slideOptsOne">
+    <ion-slide *ngFor="let recipe of famousRecipes">
+      <ion-thumbnail id="sliderImage" (click)="recipeDetails(recipe.id, recipe.Name)">
+        {{recipe.Name}}
+        <img src={{recipe.Image}} />
+      </ion-thumbnail>
+    </ion-slide>
+  </ion-slides>
+  <br>
+  <ion-segment class="borderForFilter" (ionChange)="change($event)" [(ngModel)] = "active">
+    <ion-segment-button value="All" (click)="filterAll()">
+      <ion-label color="tertiary">All</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Chinese" (click)="filterChinese()">
+      <ion-label color="tertiary">Chinese</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Malay" (click)="filterMalay()">
+      <ion-label color="tertiary">Malay</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Western" (click)="filterIndian()">
+      <ion-label color="tertiary">Western</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+<ion-list>
+      <ion-card *ngFor="let recipe of allRecipes" class="cardColor">
+          <ion-item lines = "none" (click)="recipeDetails(recipe.id, recipe.Name)">
+            <div class = "recipeImage">
+              <ion-avatar id="recipeThumbnail">
+                <img src={{recipe.Image}} />
+              </ion-avatar>
+              </div>
+            <div class="textColor">
+              {{recipe.Name}}
+              <br><br>
+              {{recipe.Description}}
+              <br><br>
+            </div>
+          </ion-item>
+        </ion-card>
+    </ion-list>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>

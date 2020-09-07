@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      My Reviews
+      <ion-icon name="text"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <ion-card *ngFor="let review of myReviews" class = "border">
+        <ion-item-sliding  >
+          <ion-item lines = "none" (click)="updatePopup(review.id, review.reviewContent, review.recipeName)" >
+            <ion-avatar id="recipeThumbnail">
+              <img src={{review.recipeImage}} />
+            </ion-avatar>
+            <div class="textColor">
+              <p>
+              {{review.reviewContent}}
+              <br><br>
+              {{review.datePosted}}
+              <br><br>
+              {{review.recipeName}}
+              <br><br>
+              <ion-icon name="text"></ion-icon>
+            </div>
+          </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option color="danger" (click)="deleteReview(review.id)"><ion-icon name = "trash"></ion-icon></ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+        </ion-card>
+     
+    </ion-list>
+
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{recipeDetails.Name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="imageDim">
+    <img src={{recipeDetails.Image}}/>
+  </div>
+  <ion-text color="tertiary">
+    <ion-badge>
+       {{howManyFavs}} Users favourite this <ion-icon name="heart"></ion-icon>
+      </ion-badge>
+      <br>
+      <ion-badge>
+        {{howManyRev}} Reviews for this <ion-icon name="text"></ion-icon>
+        </ion-badge>
+      <br>
+
+    <strong class="padding"><u>Difficulty Level</u></strong>
+    <p class="padding">{{recipeDetails.difficultyLevel}}</p>
+    <strong class="padding"><u>Cuisine Type</u></strong>
+    <p class="padding">{{recipeDetails.cuisine}}</p>
+    <strong class="padding"><u> Description</u> </strong>
+    <p class="padding">{{recipeDetails.LongDescription}}</p>
+    <strong class="padding"><u>Ingredients</u></strong>
+    <ion-icon name="volume-mute-outline" (click) = "stopSound()"></ion-icon>
+    <p *ngFor="let ing of recipeIngredients" class="padding">
+      <ion-icon name="volume-medium-outline" (click) = "hearRecipe(ing)"></ion-icon>
+     - {{ing}}
+    </p>
+    <strong class="padding"><u> Steps</u></strong>
+    <ion-icon name="volume-mute-outline" (click) = "stopSound()"></ion-icon>
+    <p *ngFor="let step of recipeSteps" class="padding">
+    <ion-icon name="volume-medium-outline" (click) = "hearRecipe(step)"></ion-icon>
+     - {{step}}
+    </p>
+  </ion-text>
+  <ion-button shape="round" class="viewMoreButton" (click)="viewMore()">
+    View More
+  </ion-button>
+  <ion-button shape="round" class="shopHereButton" (click) = "shopHere()">
+    Shop here
+  </ion-button>
+  <ion-button shape="round" class="youtubeButton" (click) = "watchHere()">
+    Youtube
+  </ion-button>
+  <ion-button shape="round" class="socialSharingButton" (click) = "socialSharing(recipeDetails.Image)">
+    Social Media
+  </ion-button>
+  
+</ion-content>

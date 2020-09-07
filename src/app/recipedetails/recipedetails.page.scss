@@ -1,0 +1,71 @@
+.viewMoreButton{
+    border: 2px black solid;
+    border-radius: 50px;
+    --background:#FB6D4C;
+    width: 150px;
+    margin-left: 25px;
+    height: 50px;
+    color: black;
+}
+.shopHereButton{
+    border: 2px black solid;
+    border-radius: 50px;
+    height: 50px;
+    width: 150px;
+    color: black;
+    --background:#FB6D4C;
+}
+
+.padding{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.imageDim{
+    margin-top : 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    box-shadow : black;
+}
+ion-badge{
+    margin-left: 20px;
+    --color: black;
+    --background : #FB6D4C;
+    font-size: 15px;
+    border : 1px solid black;
+    box-shadow : 2px 2px;
+}
+.youtubeButton{
+    border: 2px black solid;
+    border-radius: 50px;
+    height: 50px;
+    width: 150px;
+    color: black;
+    --background:#FB6D4C;
+    margin-left: 25px;
+}
+.socialSharingButton{
+    border: 2px black solid;
+    border-radius: 50px;
+    height: 50px;
+    width: 150px;
+    color: black;
+    --background:#FB6D4C;
+}
+.shareRecipe{
+    border: 2px black solid;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 270px;
+    width: 40px;
+    color: black;
+    margin-top : 0px;
+    margin-bottom: -50px;
+    --background:#FB6D4C;
+    box-shadow: 2px 2px;
+}
+img{
+    border : 2px solid black
+}
+

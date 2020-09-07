@@ -1,0 +1,22 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <img src="../../assets/logo.png" id="image"/>
+  <ion-input class="input" placeholder="Enter your email" color = "tertiary" [(ngModel)] = "loginEmail">
+  </ion-input>
+  <br>
+  <ion-input class="input" placeholder="Enter your password" type="password" color = "tertiary" [(ngModel)] = "loginPassword">
+  </ion-input>
+  <br>
+  <ion-button class = "loginButton" (click) = "login()" shape = "round">
+    Login
+  </ion-button>
+  <ion-button class = "googleLoginButton"(click) = "googleLogin()" shape = "round">
+    Google Login
+  </ion-button>
+  <br>
+  <br>
+  <p class="forgotYourPassword" [routerLink]="['/forgotpassword']">Forgot your Password?</p>
+  <p class="forgotYourPassword" [routerLink]="['/signup']">Don't have an account? Sign up here.</p>
+</ion-content>

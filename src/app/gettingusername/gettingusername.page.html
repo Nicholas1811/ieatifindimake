@@ -1,0 +1,13 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <img src="../../assets/logo.png"/>
+  <p>Key in your Username here</p>
+  <ion-input class="input" placeholder="Enter your username" color = "tertiary" [(ngModel)] = "googleUsername">
+  </ion-input>
+  <br>
+  <ion-button class="loginButton" (click) = "signUpWithGoogle()" shape = "round">
+    Sign Up
+  </ion-button>
+</ion-content>
