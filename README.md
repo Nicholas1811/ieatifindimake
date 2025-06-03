@@ -2,8 +2,9 @@
 ieatifindimake is a mobile application that helps users discover, review, and recreate home-cooked meals with ease. Designed to promote home cooking, especially during times like the COVID-19 lockdown, the app allows users to browse curated recipes, watch instructional videos, and even locate nearby stores for ingredients.
 
 ## Application Screens
-![[Untitled design.png]]
-![[Untitled design1.png]]
+![alt text](https://nicholassohdelin-bucket-smu.s3.ap-southeast-1.amazonaws.com/ieatifindimake1)
+![alt text](https://nicholassohdelin-bucket-smu.s3.ap-southeast-1.amazonaws.com/ieatifindimake2)
+
 
 ## 🚀 Features
 - 🔍 **Browse Recipes**: Explore a wide range of dishes across different cuisines like Chinese, Malay, Indian cuisine.
